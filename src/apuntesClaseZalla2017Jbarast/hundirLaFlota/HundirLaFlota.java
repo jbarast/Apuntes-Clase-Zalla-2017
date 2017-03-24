@@ -48,10 +48,10 @@ public class HundirLaFlota {
 
 		// Creamos los limites del tablero.
 		int xMax = x - 1;
-		int xMin = 1;
+		int xMin = 0;
 
 		int yMax = y - 1;
-		int yMin = 1;
+		int yMin = 0;
 
 		// Cordenadas del barco.
 		int xBarco = (int) (Math.random() * xMax);
@@ -69,12 +69,12 @@ public class HundirLaFlota {
 
 			// Pedimos al usuario la posicion del barco.
 			do {
-				System.out.println("Coordenada x: ");
+				System.out.format("Teclee una coordenada x, entre 0 y %d : \n", xMax);
 				xCordenadaUsuario = teclado.nextInt();
 			} while (xCordenadaUsuario > xMax || xCordenadaUsuario < xMin);
 
 			do {
-				System.out.println("Coordenada y: ");
+				System.out.format("Teclee una coordenada x, entre 0 y %d : \n", yMax);
 				yCordenadaUsuario = teclado.nextInt();
 			} while (yCordenadaUsuario > yMax || yCordenadaUsuario < yMin);
 
