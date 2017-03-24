@@ -47,15 +47,15 @@ public class HundirLaFlota {
 		// TODO crear barco fantasma.
 
 		// Creamos los limites del tablero.
-		int xMax = x;
-		int xMin = 0;
+		int xMax = x - 1;
+		int xMin = 1;
 
-		int yMax = y;
-		int ymin = 0;
+		int yMax = y - 1;
+		int yMin = 1;
 
 		// Cordenadas del barco.
-		int xBarco = (int) (Math.random() * xMax + 1);
-		int yBarco = (int) (Math.random() * yMax + 1);
+		int xBarco = (int) (Math.random() * xMax);
+		int yBarco = (int) (Math.random() * yMax);
 
 		// Comprobamos donde a creado el barco.
 
@@ -68,10 +68,15 @@ public class HundirLaFlota {
 		do {
 
 			// Pedimos al usuario la posicion del barco.
-			System.out.println("Coordenada x: ");
-			xCordenadaUsuario = teclado.nextInt();
-			System.out.println("Coordenada x: ");
-			yCordenadaUsuario = teclado.nextInt();
+			do {
+				System.out.println("Coordenada x: ");
+				xCordenadaUsuario = teclado.nextInt();
+			} while (xCordenadaUsuario > xMax || xCordenadaUsuario < xMin);
+
+			do {
+				System.out.println("Coordenada y: ");
+				yCordenadaUsuario = teclado.nextInt();
+			} while (yCordenadaUsuario > yMax || yCordenadaUsuario < yMin);
 
 			if (xBarco == xCordenadaUsuario && yBarco == yCordenadaUsuario) {
 				System.out.println("Barco hundido");
