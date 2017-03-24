@@ -59,7 +59,7 @@ public class HundirLaFlota {
 
 		// Comprobamos donde a creado el barco.
 
-		System.out.format("Las cordenadas del barco = [x: %d; y %d ]", xBarco, yBarco);
+		System.out.format("Las cordenadas del barco = [x: %d; y %d ]\n", xBarco, yBarco);
 
 		int xCordenadaUsuario = 0;
 		int yCordenadaUsuario = 0;
@@ -76,10 +76,25 @@ public class HundirLaFlota {
 			if (xBarco == xCordenadaUsuario && yBarco == yCordenadaUsuario) {
 				System.out.println("Barco hundido");
 				hundido = 1;
+				// Pintamos las x.
+				tablero[xCordenadaUsuario][yCordenadaUsuario] = 'H';
 
 			} else {
 				System.out.println("Uupps!!!");
 				System.out.println("La proxima vez sera??");
+
+				// Pintamos las x.
+				tablero[xCordenadaUsuario][yCordenadaUsuario] = 'X';
+			}
+
+			// Visualizamos el tablero.
+
+			for (int xArray = 0; xArray < tablero.length; xArray++) {
+				for (int yArray = 0; yArray < tablero[xArray].length; yArray++) {
+
+					System.out.print(tablero[xArray][yArray]);
+				}
+				System.out.println();
 			}
 
 		} while (hundido == 0);
