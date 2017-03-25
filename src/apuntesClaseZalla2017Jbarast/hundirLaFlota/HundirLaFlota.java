@@ -74,7 +74,7 @@ public class HundirLaFlota {
 			} while (xCordenadaUsuario > xMax || xCordenadaUsuario < xMin);
 
 			do {
-				System.out.format("Teclee una coordenada x, entre 0 y %d : \n", yMax);
+				System.out.format("Teclee una coordenada y, entre 0 y %d : \n", yMax);
 				yCordenadaUsuario = teclado.nextInt();
 			} while (yCordenadaUsuario > yMax || yCordenadaUsuario < yMin);
 
