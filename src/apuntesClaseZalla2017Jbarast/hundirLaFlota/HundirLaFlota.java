@@ -5,7 +5,6 @@
 package apuntesClaseZalla2017Jbarast.hundirLaFlota;
 
 import java.util.Scanner;
-import apuntesClaseZalla2017Jbarast.hundirLaFlota.Barco;
 
 public class HundirLaFlota {
 
@@ -17,9 +16,10 @@ public class HundirLaFlota {
 		// Para saber las dimenssiones del tablero.
 		int x, y;
 
-		System.out.println("Coordenada x: ");
+		System.out.println("Hundir la flota");
+		System.out.println("Anchura x: ");
 		x = teclado.nextInt();
-		System.out.println("Coordenada y: ");
+		System.out.println("Anchura y: ");
 		y = teclado.nextInt();
 
 		// Para saber cuantos barco.
@@ -100,9 +100,8 @@ public class HundirLaFlota {
 		// xBarco, yBarco);
 
 		for (int i = 0; i <= (numeroBarcos - 1); i++) {
-			System.out.format("Las cordenadas del barco %d = [x: %d; y %d ]\n",
-					i, arrayBarcos[i].getxCoordenadaBarco(),
-					arrayBarcos[i].getyCoordenadaBarco());
+			System.out.format("Las cordenadas del barco %d = [x: %d; y %d ]\n", i,
+					arrayBarcos[i].getxCoordenadaBarco(), arrayBarcos[i].getyCoordenadaBarco());
 
 		}
 
@@ -112,7 +111,7 @@ public class HundirLaFlota {
 
 		int barcosQueFaltan = numeroBarcos;
 		System.out.println("PundoControl01");
-		Barco posibleBarco = new Barco((int)1,(int)1);
+		Barco posibleBarco = new Barco((int) 1, (int) 1);
 		System.out.print("PuntoContril02");
 
 		do {
@@ -124,14 +123,12 @@ public class HundirLaFlota {
 
 			// Pedimos al usuario la posicion del barco.
 			do {
-				System.out.format("Teclee una coordenada x, entre 0 y %d : \n",
-						xMax);
+				System.out.format("Teclee una coordenada x, entre 0 y %d : \n", xMax);
 				xCordenadaUsuario = teclado.nextInt();
 			} while (xCordenadaUsuario > xMax || xCordenadaUsuario < xMin);
 
 			do {
-				System.out.format("Teclee una coordenada y, entre 0 y %d : \n",
-						yMax);
+				System.out.format("Teclee una coordenada y, entre 0 y %d : \n", yMax);
 				yCordenadaUsuario = teclado.nextInt();
 			} while (yCordenadaUsuario > yMax || yCordenadaUsuario < yMin);
 
