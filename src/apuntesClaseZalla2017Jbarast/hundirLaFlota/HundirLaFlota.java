@@ -23,12 +23,15 @@ public class HundirLaFlota {
 		y = teclado.nextInt();
 
 		// Para saber cuantos barco.
+		// Nunca mas que las posibilidades del tablero.
 
 		int numeroBarcos;
-		System.out.println("Numero de barcos: ");
-		// TODO poner que el numero de barcos no pueda ser mayor que la
-		// dimension del tableros.
-		numeroBarcos = teclado.nextInt();
+
+		do {
+			System.out.format("Numero de barcos: (Maximo=%d).\n", (x * y));
+			numeroBarcos = teclado.nextInt();
+
+		} while (numeroBarcos >= ((x * y)));
 
 		// Creacion del tablero
 
@@ -52,8 +55,6 @@ public class HundirLaFlota {
 			}
 			System.out.println();
 		}
-
-		// TODO crear barco fantasma.
 
 		// Creamos los limites del tablero.
 		int xMax = x - 1;
@@ -109,6 +110,7 @@ public class HundirLaFlota {
 		int yCordenadaUsuario = 0;
 		int hundido = 0;
 		String stringPosibleBarco;
+		int intentos = 0;
 
 		int barcosQueFaltan = numeroBarcos;
 		// System.out.println("PundoControl01");
@@ -158,7 +160,8 @@ public class HundirLaFlota {
 				}
 			}
 
-			// Pintamos la h o la x, en el tablero.
+			// Pintamos la h o la x, en el tablero aparte de gestionar los
+			// intentos.
 
 			if (hundido == 1) {
 				tablero[xCordenadaUsuario][yCordenadaUsuario] = 'H';
@@ -166,6 +169,8 @@ public class HundirLaFlota {
 			} else {
 				System.out.println("Uupps!!!");
 				System.out.println("La proxima vez sera??");
+
+				intentos += 1;
 
 				// Pintamos las x.
 				tablero[xCordenadaUsuario][yCordenadaUsuario] = 'X';
@@ -181,9 +186,15 @@ public class HundirLaFlota {
 				System.out.println();
 			}
 
+			// Visualizacion de intentos.
+
+			System.out.format("LLevas %d de intentos y todavia te quedan %d barcos de hundir.\n", intentos,
+					barcosQueFaltan);
+
 		} while (barcosQueFaltan > 0);
 
 		System.out.println("Enorabuna acabas de terminar");
+		System.out.format("En un total de %d intentos.\n", intentos);
 
 		// ///
 	}
