@@ -75,19 +75,53 @@ public class HundirLaFlota {
 
 		int xBarco = 0;
 		int yBarco = 0;
+		int repetido = 0;
+
+		int longitudArrayBarcos = 0;
 
 		Barco barco = new Barco(0, 0);
 
-		// TODO Hacer que dos barcos no puedan estar en el mismo sitio.
 		for (int i = 0; i <= (numeroBarcos - 1); i++) {
 
-			xBarco = (int) (Math.random() * xMax);
-			// System.out.print(xBarco);
-			yBarco = (int) (Math.random() * yMax);
-			// System.out.println(yBarco);
+			repetido = 0;
+			do {
+				xBarco = (int) (Math.random() * xMax);
+				// System.out.print(xBarco);
+				yBarco = (int) (Math.random() * yMax);
+				// System.out.println(yBarco);
 
-			// barco.setxCoordenadaBarco(xBarco);
-			// barco.setyCoordenadaBarco(yBarco);
+				// Miramos si coincide con alguno del array de barcos.
+
+				if (i == 0) {
+					longitudArrayBarcos = 0;
+					arrayBarcos[0] = new Barco(0, 0);
+
+				} else if (i == 1) {
+					longitudArrayBarcos = 0;
+
+				} else {
+
+					longitudArrayBarcos += 1;
+
+				}
+
+				// Impresiones de visualizacion.
+
+				// System.out.println(arrayBarcos[0].getxCoordenadaBarco());
+				// System.out.println(arrayBarcos[0].getyCoordenadaBarco());
+
+				// System.out.println(xBarco);
+				// System.out.println(yBarco);
+
+				for (int k = 0; k <= longitudArrayBarcos; k++) {
+
+					if (arrayBarcos[k].getxCoordenadaBarco() == xBarco
+							&& arrayBarcos[k].getyCoordenadaBarco() == yBarco) {
+						repetido = 1;
+					}
+				}
+
+			} while (repetido == 1);
 
 			// Metemos en el array.
 
