@@ -11,21 +11,25 @@ package apuntesClaseZalla2017Jbarast.hundirLaFlota;
 
 //Librerias.
 
-
-
 public class Barco {
-	
-	//Las variables.
-	
+
+	// Las variables.
+
 	private int xCoordenadaBarco;
 	private int yCoordenadaBarco;
-	
-	//Constructor.
-	
-	public Barco(int x, int y){
-		
+
+	// Constructor.
+
+	public Barco(int x, int y) {
+
 		this.xCoordenadaBarco = x;
 		this.yCoordenadaBarco = y;
+	}
+
+	public Barco() {
+
+		this.xCoordenadaBarco = 0;
+		this.yCoordenadaBarco = 0;
 	}
 
 	public int getxCoordenadaBarco() {
@@ -43,11 +47,10 @@ public class Barco {
 	public void setyCoordenadaBarco(int yCoordenadaBarco) {
 		this.yCoordenadaBarco = yCoordenadaBarco;
 	}
-	
-	
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Barco [xCoordenadaBarco=" + xCoordenadaBarco + ", yCoordenadaBarco=" + yCoordenadaBarco + "]";
+	}
 
 }

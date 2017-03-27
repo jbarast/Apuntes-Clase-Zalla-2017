@@ -81,9 +81,9 @@ public class HundirLaFlota {
 		for (int i = 0; i <= (numeroBarcos - 1); i++) {
 
 			xBarco = (int) (Math.random() * xMax);
-			System.out.print(xBarco);
+			// System.out.print(xBarco);
 			yBarco = (int) (Math.random() * yMax);
-			System.out.println(yBarco);
+			// System.out.println(yBarco);
 
 			// barco.setxCoordenadaBarco(xBarco);
 			// barco.setyCoordenadaBarco(yBarco);
@@ -100,7 +100,7 @@ public class HundirLaFlota {
 		// xBarco, yBarco);
 
 		for (int i = 0; i <= (numeroBarcos - 1); i++) {
-			System.out.format("Las cordenadas del barco %d = [x: %d; y %d ]\n", i,
+			System.out.format("Las cordenadas del barco %d = [x: %d; y %d ]\n", (i + 1),
 					arrayBarcos[i].getxCoordenadaBarco(), arrayBarcos[i].getyCoordenadaBarco());
 
 		}
@@ -108,18 +108,22 @@ public class HundirLaFlota {
 		int xCordenadaUsuario = 0;
 		int yCordenadaUsuario = 0;
 		int hundido = 0;
+		String stringPosibleBarco;
 
 		int barcosQueFaltan = numeroBarcos;
-		System.out.println("PundoControl01");
-		Barco posibleBarco = new Barco((int) 1, (int) 1);
-		System.out.print("PuntoContril02");
+		// System.out.println("PundoControl01");
+		Barco posibleBarco = new Barco();
+
+		// System.out.println(posibleBarco);
+
+		// TODO Arreglar lo de comprobar los barcos.
 
 		do {
 
 			hundido = 0;
 			// Mostramos cuantos barcos quedan.
 
-			System.out.format("Todavia quedan % barcos.\n", barcosQueFaltan);
+			System.out.format("Todavia quedan %d barcos.\n", barcosQueFaltan);
 
 			// Pedimos al usuario la posicion del barco.
 			do {
@@ -135,39 +139,37 @@ public class HundirLaFlota {
 			posibleBarco.setxCoordenadaBarco(xCordenadaUsuario);
 			posibleBarco.setyCoordenadaBarco(yCordenadaUsuario);
 
+			// Codigo de control. Para saber si se crea el posible barco.
+			// stringPosibleBarco = posibleBarco.toString();
+			// System.out.println(stringPosibleBarco);
+
 			// Miramos si coincide con algun barco del arrayBarcos.
+			//
 
-			for (int i = 0; i <= arrayBarcos.length; i++) {
+			for (int i = 0; i < arrayBarcos.length; i++) {
 
-				if (arrayBarcos[i] == posibleBarco) {
+				if (arrayBarcos[i].getxCoordenadaBarco() == posibleBarco.getxCoordenadaBarco()
+						&& arrayBarcos[i].getyCoordenadaBarco() == posibleBarco.getyCoordenadaBarco()) {
+					System.out.println("Hundido barco");
 					hundido = 1;
 					barcosQueFaltan -= 1;
-					System.out.println("Un barco hundido");
-					tablero[xCordenadaUsuario][yCordenadaUsuario] = 'H';
+				} else {
+					// System.out.println("Barco no coincide con" + i);
 				}
 			}
 
-			if (hundido == 0) {
+			// Pintamos la h o la x, en el tablero.
+
+			if (hundido == 1) {
+				tablero[xCordenadaUsuario][yCordenadaUsuario] = 'H';
+
+			} else {
 				System.out.println("Uupps!!!");
 				System.out.println("La proxima vez sera??");
+
 				// Pintamos las x.
 				tablero[xCordenadaUsuario][yCordenadaUsuario] = 'X';
-
 			}
-
-			// if (xBarco == xCordenadaUsuario && yBarco == yCordenadaUsuario) {
-			// System.out.println("Barco hundido");
-			// hundido = 1;
-			// // Pintamos las x.
-			// tablero[xCordenadaUsuario][yCordenadaUsuario] = 'H';
-			//
-			// } else {
-			// System.out.println("Uupps!!!");
-			// System.out.println("La proxima vez sera??");
-			//
-			// // Pintamos las x.
-			// tablero[xCordenadaUsuario][yCordenadaUsuario] = 'X';
-			// }
 
 			// Visualizamos el tablero.
 
@@ -181,7 +183,8 @@ public class HundirLaFlota {
 
 		} while (barcosQueFaltan > 0);
 
+		System.out.println("Enorabuna acabas de terminar");
+
 		// ///
 	}
-
 }
