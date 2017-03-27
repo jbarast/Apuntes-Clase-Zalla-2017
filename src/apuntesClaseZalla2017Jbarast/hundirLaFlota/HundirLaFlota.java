@@ -53,7 +53,6 @@ public class HundirLaFlota {
 
 				System.out.print(tablero[xArray][yArray]);
 			}
-			System.out.println();
 		}
 
 		// Creamos los limites del tablero.
@@ -129,16 +128,18 @@ public class HundirLaFlota {
 
 		}
 
-		// Comprobamos donde a creado el barco.
+		// .... Comprobamos donde a creado el barco....
 
 		// System.out.format("Las cordenadas del barco = [x: %d; y %d ]\n",
 		// xBarco, yBarco);
 
-		for (int i = 0; i <= (numeroBarcos - 1); i++) {
-			System.out.format("Las cordenadas del barco %d = [x: %d; y %d ]\n", (i + 1),
-					arrayBarcos[i].getxCoordenadaBarco(), arrayBarcos[i].getyCoordenadaBarco());
-
-		}
+		// for (int i = 0; i <= (numeroBarcos - 1); i++) {
+		// System.out.format("Las cordenadas del barco %d = [x: %d; y %d ]\n",
+		// (i + 1),
+		// arrayBarcos[i].getxCoordenadaBarco(),
+		// arrayBarcos[i].getyCoordenadaBarco());
+		//
+		// }
 
 		int xCordenadaUsuario = 0;
 		int yCordenadaUsuario = 0;
@@ -161,20 +162,22 @@ public class HundirLaFlota {
 
 			System.out.format("Todavia quedan %d barcos.\n", barcosQueFaltan);
 
-			// Pedimos al usuario la posicion del barco.
 			do {
-				System.out.format("Teclee una coordenada x, entre 0 y %d : \n", xMax);
-				xCordenadaUsuario = teclado.nextInt();
-			} while (xCordenadaUsuario > xMax || xCordenadaUsuario < xMin);
 
-			do {
-				System.out.format("Teclee una coordenada y, entre 0 y %d : \n", yMax);
-				yCordenadaUsuario = teclado.nextInt();
-			} while (yCordenadaUsuario > yMax || yCordenadaUsuario < yMin);
+				// Pedimos al usuario la posicion del barco.
+				do {
+					System.out.format("Teclee una coordenada x, entre 0 y %d : \n", xMax);
+					xCordenadaUsuario = teclado.nextInt();
+				} while (xCordenadaUsuario > xMax || xCordenadaUsuario < xMin);
 
-			posibleBarco.setxCoordenadaBarco(xCordenadaUsuario);
-			posibleBarco.setyCoordenadaBarco(yCordenadaUsuario);
+				do {
+					System.out.format("Teclee una coordenada y, entre 0 y %d : \n", yMax);
+					yCordenadaUsuario = teclado.nextInt();
+				} while (yCordenadaUsuario > yMax || yCordenadaUsuario < yMin);
 
+				posibleBarco.setxCoordenadaBarco(xCordenadaUsuario);
+				posibleBarco.setyCoordenadaBarco(yCordenadaUsuario);
+			} while (tablero[xCordenadaUsuario][yCordenadaUsuario] != '.');
 			// Codigo de control. Para saber si se crea el posible barco.
 			// stringPosibleBarco = posibleBarco.toString();
 			// System.out.println(stringPosibleBarco);
