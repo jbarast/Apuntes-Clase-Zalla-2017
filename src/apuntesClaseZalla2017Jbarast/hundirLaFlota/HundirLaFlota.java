@@ -53,6 +53,7 @@ public class HundirLaFlota {
 
 				System.out.print(tablero[xArray][yArray]);
 			}
+			System.out.println();
 		}
 
 		// Creamos los limites del tablero.
@@ -80,6 +81,12 @@ public class HundirLaFlota {
 
 		Barco barco = new Barco(0, 0);
 
+		for (int p = 0; p <= numeroBarcos - 1; p++) {
+
+			arrayBarcos[p] = new Barco(-1, -1);
+
+		}
+
 		for (int i = 0; i <= (numeroBarcos - 1); i++) {
 
 			repetido = 0;
@@ -90,19 +97,19 @@ public class HundirLaFlota {
 				// System.out.println(yBarco);
 
 				// Miramos si coincide con alguno del array de barcos.
-
-				if (i == 0) {
-					longitudArrayBarcos = 0;
-					arrayBarcos[0] = new Barco(0, 0);
-
-				} else if (i == 1) {
-					longitudArrayBarcos = 0;
-
-				} else {
-
-					longitudArrayBarcos += 1;
-
-				}
+				//
+				// if (i == 0) {
+				// longitudArrayBarcos = 0;
+				// arrayBarcos[0] = new Barco(0, 0);
+				//
+				// } else if (i == 1) {
+				// longitudArrayBarcos = 0;
+				//
+				// } else {
+				//
+				// longitudArrayBarcos += 1;
+				//
+				// }
 
 				// Impresiones de visualizacion.
 
@@ -128,18 +135,16 @@ public class HundirLaFlota {
 
 		}
 
-		// .... Comprobamos donde a creado el barco....
+		// Comprobamos donde a creado el barco.
 
 		// System.out.format("Las cordenadas del barco = [x: %d; y %d ]\n",
 		// xBarco, yBarco);
 
-		// for (int i = 0; i <= (numeroBarcos - 1); i++) {
-		// System.out.format("Las cordenadas del barco %d = [x: %d; y %d ]\n",
-		// (i + 1),
-		// arrayBarcos[i].getxCoordenadaBarco(),
-		// arrayBarcos[i].getyCoordenadaBarco());
-		//
-		// }
+		for (int i = 0; i <= (numeroBarcos - 1); i++) {
+			System.out.format("Las cordenadas del barco %d = [x: %d; y %d ]\n", (i + 1),
+					arrayBarcos[i].getxCoordenadaBarco(), arrayBarcos[i].getyCoordenadaBarco());
+
+		}
 
 		int xCordenadaUsuario = 0;
 		int yCordenadaUsuario = 0;
