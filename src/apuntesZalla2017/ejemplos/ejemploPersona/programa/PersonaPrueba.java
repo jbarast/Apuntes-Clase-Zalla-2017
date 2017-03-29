@@ -25,6 +25,10 @@ public class PersonaPrueba {
 		// CUARTO
 		System.out.println(p1.aTexto()); // ID: 1, NOMBRE: Javier
 
+		// Haciendo pruebas extras.
+		// Persona p2 = new Persona(89, "Jon");
+		// System.out.println(p2.aTexto());
+
 	}
 
 }

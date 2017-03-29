@@ -33,12 +33,28 @@ public class Persona {
 		this.nombre = nombre;
 	}
 
+	public void setFechaNacimiento(Date fechaNacimiento) {
+
+		this.fechaNacimiento = fechaNacimiento;
+
+	}
+
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
 	// Constructor.
+
+	public Persona(int id, String nombre, Date fechaNacimiento) {
+		setId(id);
+		setNombre(nombre);
+		setFechaNacimiento(fechaNacimiento);
+
+	}
 
 	public Persona(int id, String nombre) {
 
-		setId(id);
-		setNombre(nombre);
+		this(id, nombre, new Date());
 
 	}
 
@@ -50,12 +66,6 @@ public class Persona {
 
 	public String aTexto() {
 		return "ID: " + id + ", NOMBRE: " + nombre + ", FECHA NACIMIENTO: " + fechaNacimiento;
-	}
-
-	public void setFechaNacimiento(Date fechaNacimiento) {
-
-		this.fechaNacimiento = fechaNacimiento;
-
 	}
 
 }
