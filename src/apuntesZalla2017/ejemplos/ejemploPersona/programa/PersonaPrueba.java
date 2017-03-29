@@ -1,3 +1,8 @@
+//PersonaPrueba.java
+//Autor: jbarast
+//Fecha : 29/03/2017
+//Notas: Programa para probar la programacion orientada a objetos.
+
 package apuntesZalla2017.ejemplos.ejemploPersona.programa;
 
 import java.util.Date;
@@ -10,6 +15,7 @@ public class PersonaPrueba {
 
 		// PRIMERO
 		Persona p1 = new Persona();
+		System.out.println(p1.aTexto());
 
 		p1.setId(5);
 		p1.setNombre("Javier");

@@ -54,18 +54,19 @@ public class Persona {
 
 	public Persona(int id, String nombre) {
 
-		this(id, nombre, new Date());
+		this(id, nombre, new Date("0999/01/01"));
 
 	}
 
 	public Persona() {
-		this(0, "");
+		this(0, "Anonimo", new Date("0999/01/01"));
 	}
 
 	// Metodos.
 
 	public String aTexto() {
-		return "ID: " + id + ", NOMBRE: " + nombre + ", FECHA NACIMIENTO: " + fechaNacimiento;
+		return String.format("ID: %d, NOMBRE: %s, FECHA_NACIMIENTO: %d-%d-%d", getId(), getNombre(),
+				fechaNacimiento.getDay(), fechaNacimiento.getMonth(), fechaNacimiento.getYear());
 	}
 
 }
