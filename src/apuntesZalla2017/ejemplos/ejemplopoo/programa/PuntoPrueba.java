@@ -6,6 +6,8 @@
 
 package apuntesZalla2017.ejemplos.ejemplopoo.programa;
 
+import java.util.Date;
+
 //Importamos el objeto punto.
 import apuntesZalla2017.ejemplos.ejemplopoo.tipos.Punto;
 
@@ -45,7 +47,16 @@ public class PuntoPrueba {
 
 		System.out.println(String.format("Punto pt2(%.2f : %.2f)", pt2.getXDouble(), pt2.getYDouble()));
 
+		// Para poner fechas.
+
+		fechas();
 		// /
+	}
+
+	// Metodo para poner las fechas.
+	private static void fechas() {
+		Date d = new Date();
+		System.out.println(d);
 	}
 
 }
