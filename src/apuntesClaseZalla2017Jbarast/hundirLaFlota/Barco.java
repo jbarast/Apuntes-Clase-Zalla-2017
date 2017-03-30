@@ -13,7 +13,7 @@ package apuntesClaseZalla2017Jbarast.hundirLaFlota;
 
 public class Barco {
 
-	// Las variables.
+	// Atributos.
 
 	private int xCoordenadaBarco;
 	private int yCoordenadaBarco;

@@ -10,7 +10,7 @@ public class Punto {
 
 	/*
 	 * ************
-	 * VARIABLES ***********
+	 * ATRIBUTOS ***********
 	 */
 	private double x; // Los private solo se pueden aceder desde la clase
 						// propia.

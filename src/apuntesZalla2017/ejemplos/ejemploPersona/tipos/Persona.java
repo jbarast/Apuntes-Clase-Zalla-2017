@@ -10,7 +10,7 @@ import java.util.Date;
 
 public class Persona {
 
-	// Variables
+	// Atributo.
 	private int id;
 	private String nombre;
 
@@ -66,7 +66,7 @@ public class Persona {
 
 	public String aTexto() {
 		return String.format("ID: %d, NOMBRE: %s, FECHA_NACIMIENTO: %d-%d-%d", getId(), getNombre(),
-				fechaNacimiento.getDay(), fechaNacimiento.getMonth(), fechaNacimiento.getYear());
+				fechaNacimiento.getDay(), fechaNacimiento.getMonth() + 1, fechaNacimiento.getYear() + 1900);
 	}
 
 }
