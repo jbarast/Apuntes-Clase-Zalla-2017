@@ -136,4 +136,6 @@ public class Empresa02Test {
 		assertEquals("Fallo en setPersonaJunta, tendria que ser null", null, empresa.getPersonaJunta(3));
 	}
 
+	// TODO test addPersona, hacerlo.
+
 }

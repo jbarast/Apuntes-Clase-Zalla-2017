@@ -82,4 +82,9 @@ public class Empresa02 {
 		return junta[posicion];
 	}
 
+	// Para añadir personas al arraylist.
+	public void addPersona(Persona persona) {
+		personas.add(persona);
+	}
+
 }
