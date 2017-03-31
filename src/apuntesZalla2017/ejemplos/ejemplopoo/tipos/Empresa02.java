@@ -71,4 +71,15 @@ public class Empresa02 {
 				+ ", personas=" + personas + "]";
 	}
 
+	// Funciones para meter personas en la junta y saber quien esta en esa
+	// posicion.
+	public void setPersonaJunta(Persona persona, int posicion) {
+		this.junta[posicion] = persona;
+	}
+
+	public Persona getPersonaJunta(int posicion) {
+
+		return junta[posicion];
+	}
+
 }
