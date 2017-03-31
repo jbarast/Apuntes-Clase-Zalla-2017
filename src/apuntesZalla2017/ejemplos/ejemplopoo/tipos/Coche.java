@@ -5,6 +5,8 @@
 
 package apuntesZalla2017.ejemplos.ejemplopoo.tipos;
 
+import java.util.Arrays;
+
 public class Coche {
 
 	// Atributos.
@@ -13,6 +15,7 @@ public class Coche {
 	private boolean nuevo;
 	private int antiguedad;
 	private int precio;
+	private Rueda[] ruedas = new Rueda[4];
 
 	// Constructores.
 	public Coche() {
@@ -97,10 +100,20 @@ public class Coche {
 		this.precio = precio;
 	}
 
+	public Rueda[] getRuedas() {
+		return ruedas;
+	}
+
+	public void setRuedas(Rueda[] ruedas) {
+		this.ruedas = ruedas;
+	}
+
 	// Otras funcionalidades.
+
 	@Override
 	public String toString() {
-		return "Coche [marca=" + getMarca() + ", potencia=" + getPotencia() + ", nuevo=" + isNuevo() + "]";
+		return "Coche [marca=" + marca + ", potencia=" + potencia + ", nuevo=" + nuevo + ", antiguedad=" + antiguedad
+				+ ", precio=" + precio + ",\n ruedas=" + Arrays.toString(ruedas) + "]";
 	}
 
 }

@@ -144,8 +144,27 @@ public class CocheTest02 {
 
 	}
 
+	// TODO Hacer test de testGetRueda.
+	@Test
+	public void testGetRueda() {
+		// Mirando si funciona bien cambiando el precio.
+		assertEquals("Fallo setPrecio", 5000 * 5, coche.getPrecio());
+
+	}
+
+	// TODO Hacer el test testSetRueda.
+	@Test
+	public void testSetRueda() {
+		// Mirando si funciona bien cambiando el precio.
+		coche.setPrecio(5000);
+		assertEquals("Fallo setPrecio", 5000 * 5, coche.getPrecio());
+
+	}
+
+	// TODO Añador a testToString(), las ruedas.
 	@Test
 	public void testToString() {
+
 		assertEquals("Fallo toString", "Coche [marca=" + "nisu" + ", potencia=" + "50" + ", nuevo=" + true + "]",
 				coche.toString());
 	}

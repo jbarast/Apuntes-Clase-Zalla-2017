@@ -62,6 +62,10 @@ public class Persona {
 		this(0, "Anonimo", new Date("0999/01/01"));
 	}
 
+	public Persona(String nombre) {
+		this(0, nombre, new Date("0999/01/01"));
+	}
+
 	// Metodos.
 
 	public String aTexto() {
