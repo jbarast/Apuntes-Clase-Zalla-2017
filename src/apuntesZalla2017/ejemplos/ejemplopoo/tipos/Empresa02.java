@@ -48,14 +48,11 @@ public class Empresa02 {
 		this.director = director;
 	}
 
-	public Persona[] getJunta() {
+	public Persona[] getJunta() {		
 		return junta;
 	}
 
-	public void setJunta(Persona[] junta) {
-		this.junta = junta;
-	}
-
+	//El setJunta no se hace por que hay que meterlos de uno en uno.
 	public ArrayList<Persona> getPersonas() {
 		return personas;
 	}
