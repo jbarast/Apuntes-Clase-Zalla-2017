@@ -1,6 +1,24 @@
 #ignorar ciertas carpetas o ficheros.
-
 /bin/
+
+#Eclipse IDE: Archivos de configuracion
 /.settings/
 /.classpath
 /.project
+
+#Maven : Archivos compilados.
+target/
+
+#Netbeans: Archivos de configuracion.
+nbactions.xml
+
+#sublimetext : Archibos de configuracion.
+# sublimetext
+/*.sublime-project
+*.sublime-workspace
+
+# vim
+.*.sw[a-z]
+*.un~
+Session.vim
+.netrwhist
