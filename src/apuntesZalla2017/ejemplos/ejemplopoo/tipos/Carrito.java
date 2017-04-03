@@ -48,7 +48,11 @@ public class Carrito {
 	// TODO Hacer como quiero que salga.
 	@Override
 	public String toString() {
-		return "Carrito [arrayListCarrito=" + arrayListCarrito + "]";
+		return "" + arrayListCarrito; // El que
+										// viene
+										// de
+										// serie.
+
 	}
 
 	// Funcion: getPrecioTotal(),
@@ -57,6 +61,7 @@ public class Carrito {
 	// Funcion que nos devuelve el precio total
 	public double getPrecioTotal() {
 		// TODO limitar el numero de decimales.
+
 		// Hacemos la suma.
 		double precioTotal = 0;
 
@@ -64,7 +69,8 @@ public class Carrito {
 			precioTotal += dato.getPrecio();
 		}
 
-		return precioTotal;
+		return Math.round(precioTotal * 100.0) / 100.0; // Metodo para hacer el
+														// round.
 
 	}
 
@@ -99,7 +105,8 @@ public class Carrito {
 		System.out.println(((double) 21 / (double) 100));
 
 		// Calculamos el iva y lo devolvemos.
-		return this.getPrecioTotal() * (VALOR_IVA / 100);
+
+		return Math.round((this.getPrecioTotal() * (VALOR_IVA / 100)) * 100.0) / 100.0;
 
 	}
 
@@ -110,7 +117,7 @@ public class Carrito {
 
 	public double getPrecioTotalConIva() {
 
-		return this.getPrecioTotal() + this.getIvaSobrePrecioTotal();
+		return Math.round((this.getPrecioTotal() + this.getIvaSobrePrecioTotal()) * 100.0) / 100.0;
 
 	}
 
