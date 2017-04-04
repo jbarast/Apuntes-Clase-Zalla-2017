@@ -63,7 +63,7 @@ public class Carrito {
 		// TODO limitar el numero de decimales.
 
 		// Hacemos la suma.
-		double precioTotal = 0;
+		double precioTotal = 0.0;
 
 		for (Producto dato : arrayListCarrito) {
 			precioTotal += dato.getPrecio();
@@ -102,7 +102,7 @@ public class Carrito {
 		// Hacemos la suma.
 		final double VALOR_IVA = 21;
 
-		System.out.println(((double) 21 / (double) 100));
+		// System.out.println(((double) 21 / (double) 100));
 
 		// Calculamos el iva y lo devolvemos.
 
