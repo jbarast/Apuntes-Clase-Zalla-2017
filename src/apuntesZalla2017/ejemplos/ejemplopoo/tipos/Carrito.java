@@ -4,6 +4,7 @@
 //Notas: Clase Carrito para el ejercicio del 03/04/2017.
 package apuntesZalla2017.ejemplos.ejemplopoo.tipos;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 //imports.
@@ -60,7 +61,6 @@ public class Carrito {
 	// Out: float precioTotal.
 	// Funcion que nos devuelve el precio total
 	public double getPrecioTotal() {
-		// TODO limitar el numero de decimales.
 
 		// Hacemos la suma.
 		double precioTotal = 0.0;
@@ -72,6 +72,22 @@ public class Carrito {
 		return Math.round(precioTotal * 100.0) / 100.0; // Metodo para hacer el
 														// round.
 
+	}
+
+	// Funcion: getPrecioTotalSeguro(),
+	// Int: --
+	// Out: BigDecimal precioTotal.
+	// Funcion que nos devuelve el precio total en BigDecimal
+	public BigDecimal getPrecioTotalSeguro() {
+		// Creamos el BigDecimal
+		BigDecimal precioTotal = new BigDecimal(0.0);
+
+		// Sacamos los precios.
+		for (Producto p : arrayListCarrito) {
+			precioTotal = precioTotal.add(p.getPrecioSeguro());
+		}
+
+		return precioTotal;
 	}
 
 	// Funcion: add(),

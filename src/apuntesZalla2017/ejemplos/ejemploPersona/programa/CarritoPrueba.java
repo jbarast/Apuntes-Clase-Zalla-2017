@@ -5,6 +5,8 @@
 
 package apuntesZalla2017.ejemplos.ejemploPersona.programa;
 
+import java.math.BigDecimal;
+
 import apuntesZalla2017.ejemplos.ejemplopoo.tipos.Carrito;
 import apuntesZalla2017.ejemplos.ejemplopoo.tipos.Producto;
 
@@ -18,7 +20,7 @@ public class CarritoPrueba {
 		// c.add(new Producto(3, "Ratón", 10.3));
 
 		// Para crear una lista que no sabemos.
-		int numeroProductos = (int) Math.floor(Math.random() * 75);
+		int numeroProductos = (int) Math.floor(Math.random() * 100);
 
 		for (int id = 1; id <= numeroProductos; id++)
 			c.add(new Producto(id, "Producto", Math.round((Math.random() * 1000) * 100) / 100)); // No
@@ -44,5 +46,14 @@ public class CarritoPrueba {
 		System.out.println(c.getIvaSobrePrecioTotal()); // Asumimos IVA 21%
 		System.out.println("Precio total con IVA:");
 		System.out.println(c.getPrecioTotalConIva());
+
+		// Utilizando el BigDecimal. Ejemplo.
+		// En vez de guardarlo en un double. Problema double, que puede haber
+		// rastillos.
+		// Por lo que lo metemos en BigDecimal que arregla este problema.
+		BigDecimal precioNuevo = new BigDecimal(c.getPrecioTotalConIva());
+
+		System.out.println(precioNuevo);
 	}
+
 }

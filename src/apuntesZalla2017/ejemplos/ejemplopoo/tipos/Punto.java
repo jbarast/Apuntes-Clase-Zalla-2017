@@ -18,6 +18,37 @@ public class Punto {
 
 	/*
 	 * ************
+	 * CONSTRUCTOR ***********
+	 */
+	// Para el caso que son doubles.
+	public Punto(double x, double y) {
+		setXDouble(x);
+		setYDouble(y);
+	}
+
+	// Para el caso que son int.
+	public Punto(int x, int y) {
+		// setX(x);
+		// setY(y);
+		// Delegando.
+
+		this((double) x, (double) y); // Pasan el marron al constructor gordo.
+	}
+
+	// Para el caso que no pongo ninguno. Lo pongo como doubles.
+	public Punto() {
+		// setXDouble(0); // En principio no hace falta ponerlo, coje como
+		// default
+		// el valor de 0,0
+		// setYDouble(0);
+
+		// Otra forma de hacerlo.
+		this(0.0, 0.0); // Delega el constructor, menos codigo.
+
+	}
+
+	/*
+	 * ************
 	 * GET Y SET ***********
 	 */
 
@@ -63,35 +94,13 @@ public class Punto {
 		this.y = y;
 	}
 
-	/*
-	 * ************
-	 * CONSTRUCTOR ***********
-	 */
-	// Para el caso que son doubles.
-	public Punto(double x, double y) {
-		setXDouble(x);
-		setYDouble(y);
-	}
-
-	// Para el caso que son int.
-	public Punto(int x, int y) {
-		// setX(x);
-		// setY(y);
-		// Delegando.
-
-		this((double) x, (double) y); // Pasan el marron al constructor gordo.
-	}
-
-	// Para el caso que no pongo ninguno. Lo pongo como doubles.
-	public Punto() {
-		// setXDouble(0); // En principio no hace falta ponerlo, coje como
-		// default
-		// el valor de 0,0
-		// setYDouble(0);
-
-		// Otra forma de hacerlo.
-		this(0.0, 0.0); // Delega el constructor, menos codigo.
-
+	// ********
+	// Otras funciones.
+	//
+	// *********
+	@Override
+	public String toString() {
+		return "Punto [x=" + x + ", y=" + y + "]";
 	}
 
 	// /

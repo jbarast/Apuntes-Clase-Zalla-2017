@@ -5,6 +5,8 @@
 
 package apuntesZalla2017.ejemplos.ejemplopoo.tipos;
 
+import java.math.BigDecimal;
+
 public class Producto {
 
 	// Atributos:
@@ -12,6 +14,7 @@ public class Producto {
 	int id;
 	String producto;
 	double precio;
+	private BigDecimal precioSeguro;
 
 	// Constructor.
 	// Siempre hay que meter id, nombre del producto y precio.
@@ -20,7 +23,9 @@ public class Producto {
 		super();
 		this.id = id;
 		this.producto = producto;
-		this.precio = precio;
+		// this.precio = precio;
+		setPrecio(precio); // Para hacer unas pruebas.
+
 	}
 
 	// Getter and Setters.
@@ -45,8 +50,18 @@ public class Producto {
 		return precio;
 	}
 
-	public void setPrecio(float precio) {
+	public void setPrecio(double precio) {
 		this.precio = precio;
+		// setPrecioSeguro(new BigDecimal(precio));
+		setPrecioSeguro(new BigDecimal(String.format("%.2f", precio).replace(',', '.')));
+	}
+
+	public BigDecimal getPrecioSeguro() {
+		return precioSeguro;
+	}
+
+	public void setPrecioSeguro(BigDecimal precioSeguro) {
+		this.precioSeguro = precioSeguro;
 	}
 
 	// Otras funciones
