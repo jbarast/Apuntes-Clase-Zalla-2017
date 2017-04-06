@@ -12,6 +12,10 @@ public class PuntoNombre extends Punto {
 	private String nombre;
 
 	// Constructores.
+	public PuntoNombre() {
+		super(); // No hereda el constructor del padre, si no, que lo utiliza.
+		this.nombre = "Punto";
+	}
 
 	// getters y setters.
 

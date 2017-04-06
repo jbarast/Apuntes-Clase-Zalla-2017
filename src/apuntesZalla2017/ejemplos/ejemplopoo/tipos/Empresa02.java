@@ -17,9 +17,14 @@ public class Empresa02 {
 	private String nombre;
 	private Persona director;
 
+	// Con personas.
 	private Persona[] junta = new Persona[5]; // Declaracion de un array de
 												// personas.
 	private ArrayList<Persona> personas = new ArrayList<Persona>();
+
+	// Con empleados.
+
+	private ArrayList<Empleado> empleados = new ArrayList<Empleado>();
 
 	// Constructores.
 
@@ -48,11 +53,11 @@ public class Empresa02 {
 		this.director = director;
 	}
 
-	public Persona[] getJunta() {		
+	public Persona[] getJunta() {
 		return junta;
 	}
 
-	//El setJunta no se hace por que hay que meterlos de uno en uno.
+	// El setJunta no se hace por que hay que meterlos de uno en uno.
 	public ArrayList<Persona> getPersonas() {
 		return personas;
 	}
@@ -61,11 +66,19 @@ public class Empresa02 {
 		this.personas = personas;
 	}
 
+	public ArrayList<Empleado> getEmpleados() {
+		return empleados;
+	}
+
+	public void setEmpleados(ArrayList<Empleado> empleados) {
+		this.empleados = empleados;
+	}
+
 	// Otras funciones.
 	@Override
 	public String toString() {
 		return "Empresa02 [nombre=" + nombre + ", director=" + director + ", junta=" + Arrays.toString(junta)
-				+ ", personas=" + personas + "]";
+				+ ", personas=" + personas + ", empleados= " + empleados + "]";
 	}
 
 	// Funciones para meter personas en la junta y saber quien esta en esa
@@ -82,6 +95,11 @@ public class Empresa02 {
 	// Para añadir personas al arraylist.
 	public void addPersona(Persona persona) {
 		personas.add(persona);
+	}
+
+	// Para añadir empleados al arraylist.
+	public void addEmpleado(Empleado empleado) {
+		empleados.add(empleado);
 	}
 
 }
