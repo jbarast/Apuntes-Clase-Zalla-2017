@@ -1,0 +1,67 @@
+//PuestoTest.java
+//Autor: @jbarast
+//Fecha: 07/04/2017
+//Notas: Test para probar la clase Puesto.
+package apuntesZalla2017.ejemplos.ejemplopoo.tipos;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+
+public class PuestoTest {
+
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		// En el principio de los tiempos.
+	}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		// En el final de los tiempos.
+	}
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	// @Test
+	// public void testPuestoEnumPuestos() {
+	// fail("Not yet implemented");
+	// }
+	//
+	// @Test
+	// public void testPuestoEnumPuestosDouble() {
+	// fail("Not yet implemented");
+	// }
+	//
+	// @Test
+	// public void testGetPuesto() {
+	// fail("Not yet implemented");
+	// }
+	//
+	// @Test
+	// public void testSetPuesto() {
+	// fail("Not yet implemented");
+	// }
+	//
+	// @Test
+	// public void testGetSalarioBase() {
+	// fail("Not yet implemented");
+	// }
+	//
+	// @Test
+	// public void testSetSalarioBase() {
+	// fail("Not yet implemented");
+	// }
+	//
+	// @Test
+	// public void testGetSalario() {
+	// fail("Not yet implemented");
+	// }
+
+}
