@@ -13,8 +13,17 @@ public class PuntoNombre extends Punto {
 
 	// Constructores.
 	public PuntoNombre() {
-		super(); // No hereda el constructor del padre, si no, que lo utiliza.
-		this.nombre = "Punto";
+		// super(); // No hereda el constructor del padre, si no, que lo
+		// utiliza.
+		// this.nombre = "Punto";
+		this(0, 0, "Anónimo");
+	}
+
+	public PuntoNombre(int x, int y, String nombre) {
+
+		super(x, y); // No hereda el constructor del padre, si no, que lo
+						// utiliza.
+		this.nombre = nombre;
 	}
 
 	// getters y setters.
@@ -31,6 +40,7 @@ public class PuntoNombre extends Punto {
 	// TODO arreglar esto bien.
 	@Override
 	public String toString() {
+
 		return String.format("%s [x: %d, y: %d]", this.getNombre(), this.getX(), this.getY());
 	}
 

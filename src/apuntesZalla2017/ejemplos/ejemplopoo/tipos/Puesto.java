@@ -51,7 +51,7 @@ public class Puesto {
 	// Otras funciones.
 	@Override
 	public String toString() {
-		return String.format("El salario para el puesto %s es %d", this.getPuesto(), this.getSalario());
+		return "Puesto [puesto=" + puesto + ", salarioBase=" + this.getSalario() + "]";
 	}
 
 	// getSalario()

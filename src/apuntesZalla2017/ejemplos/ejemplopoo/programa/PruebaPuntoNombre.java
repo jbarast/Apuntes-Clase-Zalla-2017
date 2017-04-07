@@ -74,5 +74,12 @@ public class PruebaPuntoNombre {
 		System.out.println("Valor de x de ptn, cambiando el valor de x con p.setX(2000):");
 		System.out.println(ptn.getX());
 
+		// Añadido el 07/04/2017
+		Object o = ptn;
+		System.out.println("¿Es ptn heredero de la Clase Object");
+		System.out.println(ptn instanceof Object); // SIEMPRE ES TRUE.
+
+		System.out.println(o.getClass());
+
 	}
 }
