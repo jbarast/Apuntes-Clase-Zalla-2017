@@ -18,9 +18,11 @@ public class EmpleadoPruebaAbstracto {
 		// Creamos la lista de empleados.
 		ArrayList<Empleado> empleados = new ArrayList<Empleado>();
 
+		// Metmos los empleados en el ArrayList.
 		empleados.add(new EmpleadoPorHoras("Javier", 8, 15.0));
 		empleados.add(new EmpleadoIndefinido("Jon", 14, 36000.0));
 
+		// Mostramos por consola los empleados.
 		for (Empleado empleado : empleados)
 			System.out.println(empleado.getSueldo());
 	}
