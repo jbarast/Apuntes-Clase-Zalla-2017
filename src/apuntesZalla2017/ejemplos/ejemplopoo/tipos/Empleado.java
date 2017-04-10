@@ -2,9 +2,11 @@
 //Autor: @jbarast
 //Fecha: 06/04/2017
 //Notas: Clase Empleado para un ejercicio de clase.
+//Tasks: Mirar si se a creado bien el cambio de double a BigDecimal
 
 package apuntesZalla2017.ejemplos.ejemplopoo.tipos;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 import apuntesZalla2017.ejemplos.ejemploPersona.tipos.Persona;
@@ -17,7 +19,7 @@ public class Empleado extends Persona {
 	private int numeroSeguridadSocial;
 	private Puesto puesto;
 	private String empresa;
-	private double sueldoBruto;
+	private BigDecimal sueldoBruto;
 
 	// Constructor.
 
@@ -31,9 +33,20 @@ public class Empleado extends Persona {
 		this.dni = dni;
 	}
 
+	public Empleado(int id, String nombre, BigDecimal sueldoBruto) {
+		super(id, nombre);
+		this.sueldoBruto = sueldoBruto;
+	}
+
+	public Empleado(int id, String nombre, Puesto puesto) {
+		super(id, nombre);
+		this.sueldoBruto = puesto.getSalarioBG();
+		this.puesto = puesto;
+	}
+
 	// Constructor completo.
 	public Empleado(int id, String nombre, Date fechaNacimiento, int dni, int numeroSeguridadSocial, Puesto puesto,
-			String empresa, double sueldoBruto) {
+			String empresa, BigDecimal sueldoBruto) {
 		super(id, nombre, fechaNacimiento);
 		this.dni = dni;
 		this.numeroSeguridadSocial = numeroSeguridadSocial;
@@ -53,7 +66,7 @@ public class Empleado extends Persona {
 	// Getter y setters.
 
 	public int getNumeroSeguridadSocial() {
-		return numeroSeguridadSocial;
+		return this.numeroSeguridadSocial;
 	}
 
 	public void setNumeroSeguridadSocial(int numeroSeguridadSocial) {
@@ -61,7 +74,7 @@ public class Empleado extends Persona {
 	}
 
 	public Puesto getPuesto() {
-		return puesto;
+		return this.puesto;
 	}
 
 	public void setPuesto(Puesto puesto) {
@@ -69,19 +82,19 @@ public class Empleado extends Persona {
 	}
 
 	public String getEmpresa() {
-		return empresa;
+		return this.empresa;
 	}
 
 	public void setEmpresa(String empresa) {
 		this.empresa = empresa;
 	}
 
-	public double getSueldoBruto() {
-		return sueldoBruto;
+	public void setSueldoBruto(BigDecimal sueldoBruto) {
+		this.sueldoBruto = sueldoBruto;
 	}
 
-	public void setSueldoBruto(double sueldoBruto) {
-		this.sueldoBruto = sueldoBruto;
+	public BigDecimal getSueldoBruto() {
+		return this.sueldoBruto;
 	}
 
 	// Otras funciones.

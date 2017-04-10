@@ -5,5 +5,5 @@
 package apuntesZalla2017.ejemplos.ejemplopoo.enums;
 
 public enum EnumPuestos {
-	PORTERO, CONSERJE, PROGRAMADOR, SECRETARIO, JUNTERO, DIRECTOR, DUENO
+	DIRECTOR, JUNTA, EMPLEADO;
 }

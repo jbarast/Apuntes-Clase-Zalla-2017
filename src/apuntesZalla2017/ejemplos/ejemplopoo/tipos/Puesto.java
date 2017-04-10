@@ -4,6 +4,8 @@
 //Notas: Creacion de la clase puesto.
 package apuntesZalla2017.ejemplos.ejemplopoo.tipos;
 
+import java.math.BigDecimal;
+
 import apuntesZalla2017.ejemplos.ejemplopoo.enums.EnumPuestos;
 
 public class Puesto {
@@ -12,6 +14,7 @@ public class Puesto {
 
 	private EnumPuestos puesto;
 	private double salarioBase;
+	private BigDecimal salarioBaseBG;
 
 	// private double salario;
 
@@ -21,19 +24,34 @@ public class Puesto {
 
 		this.puesto = puesto;
 		this.salarioBase = 1000.0;
+		this.salarioBaseBG = new BigDecimal(salarioBase);
 
 	}
 
 	public Puesto(EnumPuestos puesto, double salarioBase) {
 		this.puesto = puesto;
 		this.salarioBase = salarioBase;
+		this.salarioBaseBG = new BigDecimal(salarioBase);
 
+	}
+
+	public Puesto(EnumPuestos puesto, BigDecimal salarioBaseBG) {
+		this.puesto = puesto;
+		this.salarioBaseBG = salarioBaseBG;
 	}
 
 	// Getters y Setters.
 
 	public EnumPuestos getPuesto() {
 		return puesto;
+	}
+
+	public BigDecimal getSalarioBaseBG() {
+		return salarioBaseBG;
+	}
+
+	public void setSalarioBaseBG(BigDecimal salarioBaseBG) {
+		this.salarioBaseBG = salarioBaseBG;
 	}
 
 	public void setPuesto(EnumPuestos puesto) {
@@ -48,10 +66,9 @@ public class Puesto {
 		this.salarioBase = salarioBase;
 	}
 
-	// Otras funciones.
 	@Override
 	public String toString() {
-		return "Puesto [puesto=" + puesto + ", salarioBase=" + this.getSalario() + "]";
+		return "Puesto [puesto=" + puesto + ", salarioBase=" + salarioBase + ", salarioBaseBG=" + salarioBaseBG + "]";
 	}
 
 	// getSalario()
@@ -66,29 +83,46 @@ public class Puesto {
 
 		// switch case:
 		switch (this.puesto) {
-		case PORTERO:
-			salarioPuesto = this.salarioBase * 1;
-			break;
-		case CONSERJE:
-			salarioPuesto = this.salarioBase * 2;
-			break;
-		case PROGRAMADOR:
-			salarioPuesto = this.salarioBase * 3;
-			break;
-		case SECRETARIO:
+		case JUNTA:
 			salarioPuesto = this.salarioBase * 4;
 			break;
-		case JUNTERO:
-			salarioPuesto = this.salarioBase * 5;
+		case EMPLEADO:
+			salarioPuesto = this.salarioBase * 1;
 			break;
+
 		case DIRECTOR:
 			salarioPuesto = this.salarioBase * 6;
 			break;
-		case DUENO:
-			salarioPuesto = this.salarioBase * 7;
-			break;
+
 		}
 		return salarioPuesto;
+	}
+
+	// getSalarioBG()
+	// in:--
+	// out: BigDecimal() salario
+	// Nos dice cuanto es el salario respecto del puesto
+	public BigDecimal getSalarioBG() {
+
+		// variable interna para el salario.
+
+		double salarioPuesto = 0.0;
+
+		// switch case:
+		switch (this.puesto) {
+		case JUNTA:
+			salarioPuesto = this.salarioBase * 4;
+			break;
+		case EMPLEADO:
+			salarioPuesto = this.salarioBase * 1;
+			break;
+
+		case DIRECTOR:
+			salarioPuesto = this.salarioBase * 6;
+			break;
+
+		}
+		return new BigDecimal(salarioPuesto);
 	}
 
 }

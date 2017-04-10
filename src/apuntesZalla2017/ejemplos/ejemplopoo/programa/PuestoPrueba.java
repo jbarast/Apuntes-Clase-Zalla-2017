@@ -13,11 +13,11 @@ public class PuestoPrueba {
 
 	public static void main(String[] args) {
 		// Primero pruebo los enums.
-		EnumPuestos enumPuesto = EnumPuestos.CONSERJE;
+		EnumPuestos enumPuesto = EnumPuestos.DIRECTOR;
 		System.out.println(enumPuesto);
 
 		// Miramos simplemente la clase Puesto.
-		Puesto puesto = new Puesto(EnumPuestos.CONSERJE);
+		Puesto puesto = new Puesto(EnumPuestos.EMPLEADO);
 		System.out.println(puesto.getPuesto());
 		System.out.println(puesto);
 		System.out.println(puesto.getSalario());

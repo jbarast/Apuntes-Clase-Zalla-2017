@@ -73,4 +73,9 @@ public class Persona {
 				fechaNacimiento.getDay(), fechaNacimiento.getMonth() + 1, fechaNacimiento.getYear() + 1900);
 	}
 
+	@Override
+	public String toString() {
+		return "Persona [id=" + id + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + "]";
+	}
+
 }

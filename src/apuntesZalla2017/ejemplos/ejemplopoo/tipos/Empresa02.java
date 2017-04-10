@@ -2,9 +2,11 @@
 //Autor: jonBarnes
 //Fecha: 31/03/2017
 //Notas: Clase Empresa copiada a Javier.
+//Tasks: TODO mirar si funciona bien la clase Empresa.
 package apuntesZalla2017.ejemplos.ejemplopoo.tipos;
 
 //Imports.
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -74,6 +76,22 @@ public class Empresa02 {
 		this.empleados = empleados;
 	}
 
+	// Nueva funcion. getTotalEmpleados.
+	public BigDecimal getTotalSueldoBruto() {
+		BigDecimal total = new BigDecimal(0.0);
+
+		Empleado e;
+		for (Persona p : personas) {
+			if (p instanceof Empleado) {
+				e = (Empleado) p;
+				total = total.add(e.getSueldoBruto());
+			}
+
+		}
+		return total;
+
+	}
+
 	// Otras funciones.
 	@Override
 	public String toString() {
@@ -93,8 +111,22 @@ public class Empresa02 {
 	}
 
 	// Para añadir personas al arraylist.
+	// Hecho por mi.
+	// public void addPersona(Persona persona) {
+	// personas.add(persona);
+	// }
+
+	// Para añadir personas al arraylist, por el profesor.
 	public void addPersona(Persona persona) {
+		// TODO Arreglar el codigo que esta comentado.
 		personas.add(persona);
+
+		Empleado e;
+
+		if (persona instanceof Empleado) {
+			e = (Empleado) persona;
+			// e.setEmpresa(this.);
+		}
 	}
 
 	// Para añadir empleados al arraylist.
