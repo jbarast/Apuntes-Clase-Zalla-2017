@@ -30,7 +30,7 @@ public class PuestoTest {
 	@Before
 	public void setUp() throws Exception {
 		// Al principio.
-		puesto = new Puesto(enumPuesto.CONSERJE);
+		puesto = new Puesto(enumPuesto.DIRECTOR);
 	}
 
 	@After
