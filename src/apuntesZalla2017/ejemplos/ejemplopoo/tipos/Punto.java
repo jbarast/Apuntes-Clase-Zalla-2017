@@ -103,5 +103,15 @@ public class Punto {
 		return "Punto [x=" + x + ", y=" + y + "]";
 	}
 
+	// Cuando es un metodo static, se llama punto.sumar... por que no viene de
+	// un punto. No necesita una estancia,
+	public static Punto sumar(Punto a, Punto b) {
+		return new Punto(a.getX() + b.getX(), a.getY() + b.getY());
+	}
+
+	public Punto sumar(Punto p) {
+		return sumar(this, p);
+	}
+
 	// /
 }
