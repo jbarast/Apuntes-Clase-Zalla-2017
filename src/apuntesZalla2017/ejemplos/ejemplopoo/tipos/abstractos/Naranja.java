@@ -8,7 +8,7 @@ public class Naranja extends Fruta implements Rodable {
 
 	@Override
 	public void rodar() {
-		// TODO Auto-generated method stub
+		System.out.println("NARANJA RODANDO");
 
 	}
 
