@@ -42,7 +42,7 @@ public class Figuras {
 		return longitudes;
 	}
 
-	public void setLongitud(ArrayList longitud) {
+	public void setLongitud(ArrayList<Double> longitud) {
 		this.longitudes = longitud;
 	}
 
