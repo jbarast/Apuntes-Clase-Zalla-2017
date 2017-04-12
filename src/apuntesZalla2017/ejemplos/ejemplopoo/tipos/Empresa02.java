@@ -2,7 +2,7 @@
 //Autor: jonBarnes
 //Fecha: 31/03/2017
 //Notas: Clase Empresa copiada a Javier.
-//Tasks: TODO mirar si funciona bien la clase Empresa.
+
 package apuntesZalla2017.ejemplos.ejemplopoo.tipos;
 
 //Imports.
@@ -118,7 +118,7 @@ public class Empresa02 {
 
 	// Para añadir personas al arraylist, por el profesor.
 	public void addPersona(Persona persona) {
-		// TODO Arreglar el codigo que esta comentado.
+
 		personas.add(persona);
 
 		if (persona instanceof Empleado) {

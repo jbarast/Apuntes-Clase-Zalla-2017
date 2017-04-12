@@ -20,8 +20,6 @@ public class HundirLaFlotaUnSoloBarco {
 		System.out.println("Anchura y: ");
 		y = teclado.nextInt();
 
-		// TODO Hacer el tablero.
-
 		// Creacion del tablero
 
 		char[][] tablero;
@@ -44,8 +42,6 @@ public class HundirLaFlotaUnSoloBarco {
 			}
 			System.out.println();
 		}
-
-		// TODO crear barco fantasma.
 
 		// Creamos los limites del tablero.
 		int xMax = x - 1;

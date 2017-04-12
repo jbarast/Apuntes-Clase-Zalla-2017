@@ -46,7 +46,6 @@ public class Carrito {
 	}
 
 	// Otras funciones.
-	// TODO Hacer como quiero que salga.
 	@Override
 	public String toString() {
 		return "" + arrayListCarrito; // El que

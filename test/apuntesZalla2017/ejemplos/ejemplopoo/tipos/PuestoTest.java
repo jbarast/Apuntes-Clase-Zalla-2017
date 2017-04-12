@@ -6,16 +6,14 @@ package apuntesZalla2017.ejemplos.ejemplopoo.tipos;
 
 import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
-
-import apuntesZalla2017.ejemplos.ejemplopoo.enums.EnumPuestos;
 
 public class PuestoTest {
 
 	// Variable.
 	Puesto puesto;
-	private EnumPuestos enumPuesto;
+
+	// private EnumPuestos enumPuesto;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -27,11 +25,11 @@ public class PuestoTest {
 		// En el final de los tiempos.
 	}
 
-	@Before
-	public void setUp() throws Exception {
-		// Al principio.
-		puesto = new Puesto(enumPuesto.DIRECTOR);
-	}
+	// @Before
+	// public void setUp() throws Exception {
+	// // Al principio.
+	// puesto = new Puesto(enumPuesto.DIRECTOR);
+	// }
 
 	@After
 	public void tearDown() throws Exception {

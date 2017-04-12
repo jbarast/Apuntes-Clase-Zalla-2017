@@ -144,7 +144,6 @@ public class CocheTest02 {
 
 	}
 
-	// TODO Hacer test de testGetRueda.
 	@Test
 	public void testGetRueda() {
 		// Mirando si funciona bien cambiando el precio.
@@ -152,7 +151,6 @@ public class CocheTest02 {
 
 	}
 
-	// TODO Hacer el test testSetRueda.
 	@Test
 	public void testSetRueda() {
 		// Mirando si funciona bien cambiando el precio.
@@ -161,7 +159,6 @@ public class CocheTest02 {
 
 	}
 
-	// TODO Añador a testToString(), las ruedas.
 	@Test
 	public void testToString() {
 

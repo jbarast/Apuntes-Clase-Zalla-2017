@@ -37,7 +37,6 @@ public class PuntoNombre extends Punto {
 	}
 
 	// Otras funciones.
-	// TODO arreglar esto bien.
 	@Override
 	public String toString() {
 

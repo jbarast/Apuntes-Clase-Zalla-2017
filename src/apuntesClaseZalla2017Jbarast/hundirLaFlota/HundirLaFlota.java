@@ -155,8 +155,6 @@ public class HundirLaFlota {
 
 		// System.out.println(posibleBarco);
 
-		// TODO Arreglar lo de comprobar los barcos.
-
 		do {
 
 			hundido = 0;

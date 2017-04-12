@@ -100,6 +100,7 @@ public class Colecciones {
 
 	}
 
+	@SuppressWarnings("unused")
 	private static void ejemplosHashSet() {
 
 		// Creamos el HashSet
@@ -125,6 +126,7 @@ public class Colecciones {
 	}
 
 	// Metodo de ejemplosArrayList();
+	@SuppressWarnings("unused")
 	private static void ejemplosArrayList() {
 		// Declaracion de ArrayList.
 		ArrayList<String> al; // String[] arr

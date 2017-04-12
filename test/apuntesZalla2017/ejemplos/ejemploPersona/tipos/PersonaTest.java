@@ -55,7 +55,6 @@ public class PersonaTest {
 
 	@Test
 	public void testConstructorTodosLosParametros() {
-		// TODO hacer este test.
 		Date date02;
 		date02 = new Date(1989 / 10 / 01);
 		Persona p2 = new Persona(101, "juan", date);

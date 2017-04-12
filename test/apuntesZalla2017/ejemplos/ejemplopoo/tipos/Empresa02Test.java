@@ -155,7 +155,6 @@ public class Empresa02Test {
 
 	}
 
-	// TODO este test no me gusta demasiado.
 	@Test
 	public void getPersonaJunta() {
 		// Creamos dos personas para el test.

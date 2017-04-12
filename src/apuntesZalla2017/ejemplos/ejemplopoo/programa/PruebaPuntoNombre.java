@@ -58,8 +58,7 @@ public class PruebaPuntoNombre {
 		// Que pasa si un Punto se hace pasar por PuntoNombre??
 
 		Punto pt = new Punto();
-		PuntoNombre ptn3;
-		// ptn3 = (PuntoNombre) pt; // TODO arregrarlo.
+		// ptn3 = (PuntoNombre) pt;
 		// System.out.println(ptn3.getNombre());
 		System.out.println("¿Es p una instancia de PuntoNombre?");
 		System.out.println(p instanceof PuntoNombre);
