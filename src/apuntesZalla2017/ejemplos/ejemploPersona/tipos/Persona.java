@@ -52,22 +52,26 @@ public class Persona {
 
 	}
 
+	@SuppressWarnings("deprecation")
 	public Persona(int id, String nombre) {
 
 		this(id, nombre, new Date("0999/01/01"));
 
 	}
 
+	@SuppressWarnings("deprecation")
 	public Persona() {
 		this(0, "Anonimo", new Date("0999/01/01"));
 	}
 
+	@SuppressWarnings("deprecation")
 	public Persona(String nombre) {
 		this(0, nombre, new Date("0999/01/01"));
 	}
 
 	// Metodos.
 
+	@SuppressWarnings("deprecation")
 	public String aTexto() {
 		return String.format("ID: %d, NOMBRE: %s, FECHA_NACIMIENTO: %d-%d-%d", getId(), getNombre(),
 				fechaNacimiento.getDay(), fechaNacimiento.getMonth() + 1, fechaNacimiento.getYear() + 1900);

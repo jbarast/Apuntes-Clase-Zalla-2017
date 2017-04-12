@@ -79,8 +79,6 @@ public class HundirLaFlota {
 
 		int longitudArrayBarcos = 0;
 
-		Barco barco = new Barco(0, 0);
-
 		for (int p = 0; p <= numeroBarcos - 1; p++) {
 
 			arrayBarcos[p] = new Barco(-1, -1);
@@ -149,7 +147,6 @@ public class HundirLaFlota {
 		int xCordenadaUsuario = 0;
 		int yCordenadaUsuario = 0;
 		int hundido = 0;
-		String stringPosibleBarco;
 		int intentos = 0;
 
 		int barcosQueFaltan = numeroBarcos;

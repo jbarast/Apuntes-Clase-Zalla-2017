@@ -121,11 +121,7 @@ public class Empresa02 {
 		// TODO Arreglar el codigo que esta comentado.
 		personas.add(persona);
 
-		Empleado e;
-
 		if (persona instanceof Empleado) {
-			e = (Empleado) persona;
-			// e.setEmpresa(this.);
 		}
 	}
 

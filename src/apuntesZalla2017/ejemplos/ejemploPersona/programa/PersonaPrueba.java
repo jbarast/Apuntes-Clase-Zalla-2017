@@ -11,6 +11,7 @@ import apuntesZalla2017.ejemplos.ejemploPersona.tipos.Persona;
 
 public class PersonaPrueba {
 
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 
 		// PRIMERO

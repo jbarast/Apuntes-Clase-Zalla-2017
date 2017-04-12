@@ -58,10 +58,9 @@ public class EjemplosMarzo28 {
 	// Funcion para la creacion de arrays variables, con metodo antiguo.
 	// Para lo que utilizamos el objeto vector.
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	private static void colecciones() {
 
-		@SuppressWarnings("rawtypes")
 		// Para quital los warnings.
 		Vector v = new Vector();
 
@@ -103,6 +102,7 @@ public class EjemplosMarzo28 {
 
 	// El metodo factorial con bucle en vez de recursividad.
 
+	@SuppressWarnings("unused")
 	private static int factorial(int numero) {
 
 		int numeroAcumulado = numero;
