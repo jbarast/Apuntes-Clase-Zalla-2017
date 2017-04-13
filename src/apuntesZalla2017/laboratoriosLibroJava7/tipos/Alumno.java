@@ -7,10 +7,14 @@ import java.util.ArrayList;
  * <p>
  * La clase <code>Alumno.java</code> define el objeto Alumno.
  * </p>
+ * <p>
+ * Clase creada, para hacer el ejercicio de la pagina 161 del libro Java 7 de F.Javier Moldes Teo de la editorial Anaya.
+ * </p>
+ * 
  * 
  * @author jbarast
  * @version 13/04/2017
- * @see https://github.com/jbarast/Apuntes-Clase-Zalla-2017
+ * @see <url>https://github.com/jbarast/Apuntes-Clase-Zalla-2017</url>
  * 
  */
 public class Alumno {
@@ -21,6 +25,7 @@ public class Alumno {
 
 	// ArrrayLists para guardar las notas.
 	ArrayList<Double> notas1 = new ArrayList<Double>();
+	ArrayList<Double> notas2 = new ArrayList<Double>();
 
 	// Constructor.
 	/**
@@ -72,15 +77,31 @@ public class Alumno {
 	// Notas:--
 
 	/**
-	 * Mete en dos ArrayList<double> las notas1 y notas2
+	 * Mete en dos ArrayList<double> notas1 y notas2, sus respectivas notas.
 	 * 
 	 * @param nota1
 	 * @param nota2
-	 *            Notas: --
+	 *            
 	 */
 
 	public void ponNota(double nota1, double nota2) {
-		// TODO Meter las notas en las ArrayList
+		notas1.add(nota1);
+		notas2.add(nota1);
+	}
+	
+	/**
+	 * Devuelve las dos notas medias.
+	 * 
+	 * @param nota
+	 * @return notaMedia1 
+	 * 
+	 */
+	public double dameMedia(){
+		//Inicializamos las notas.
+		double notaMedia = 0.0;
+		//TODO terminar.
+		throw new RuntimeException("PENDIENTE");
+		
 	}
 
 }
