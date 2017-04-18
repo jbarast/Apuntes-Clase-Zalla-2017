@@ -10,7 +10,7 @@ import java.util.Scanner;
  * 
  * <h1>GenerarFicheroTexto</h1>
  * <p>
- * Esta clase muestra como crear un fichero de texto.
+ * Esta clase muestra como crear un fichero de texto. La cual crea una agenda, con nombres y sus respectivos telefonos.
  * </p>
  * <p>
  * Codigo mostrado en la pagina 193 del libro java7.
@@ -28,7 +28,7 @@ public class GeneraFicheroTexto {
 	public static void main(String[] args) {
 
 		// variables.
-		String nombre;
+		String nombreContacto; //Nombre a meter en la agenda
 
 		// Creamos el scanner.
 		Scanner scanner;
@@ -37,25 +37,25 @@ public class GeneraFicheroTexto {
 		// //
 		try {
 			// Creamos algo?
-			FileWriter fileWriterS; // Mirar que es la s.
-			fileWriterS = new FileWriter("Agenda.txt");
+			FileWriter ficheroAEscribir; // Mirar que es la s.
+			ficheroAEscribir = new FileWriter("Agenda.txt");
 
-			BufferedWriter fs; // Cambiar el nombre.
-			fs = new BufferedWriter(fileWriterS);
+			BufferedWriter flujoDeEscritura; // Cambiar el nombre.
+			flujoDeEscritura = new BufferedWriter(ficheroAEscribir);
 
 			do {
 				System.out.print("Introduce un nombre (Intro para terminar): ");
-				nombre = scanner.nextLine();
+				nombreContacto = scanner.nextLine();
 
-				if (nombre.length() > 0) {
+				if (nombreContacto.length() > 0) {
 					System.out.print("Telefono: ");
-					String telefono = scanner.nextLine();
-					fs.write(nombre + "," + telefono);
-					fs.newLine();
+					String telefonoDelContacto = scanner.nextLine();
+					flujoDeEscritura.write(nombreContacto + "," + telefonoDelContacto);
+					flujoDeEscritura.newLine();
 				}
 
-			} while (nombre.length() > 0);
-			fs.close();
+			} while (nombreContacto.length() > 0);
+			flujoDeEscritura.close();
 
 		} catch (IOException iOException) {
 			System.out.println("Error en el fichero");
