@@ -38,7 +38,7 @@ public class GeneraFicheroTexto {
 		try {
 			// Creamos algo?
 			FileWriter fileWriterS; // Mirar que es la s.
-			fileWriterS = new FileWriter("Agenda.txt");
+			fileWriterS = new FileWriter("Agenda.txt", true);
 
 			BufferedWriter fs; // Cambiar el nombre.
 			fs = new BufferedWriter(fileWriterS);
