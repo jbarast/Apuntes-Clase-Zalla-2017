@@ -46,9 +46,6 @@ public class AlimentosPrueba {
 		System.out.println("Vitaminas Contenidas?");
 
 		System.out.println("Minerales Contenidas??");
-		
-		String nombres[] ={"Juan", "Maria", "Antonio","Victoria"};
-		System.out.println( "La longuitud del array es= " + nombres. );
 
 	}
 }
